@@ -1,7 +1,8 @@
-import { loadTweetsController } from "./load-tweets.js";
+import { TweetListController } from "./tweet-list/TweetListController.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   const tweetListElement = document.querySelector('#tweet-list');
 
-  loadTweetsController(tweetListElement)
+  const tweetListController = new TweetListController(tweetListElement)
+
 })
