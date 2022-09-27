@@ -1,4 +1,4 @@
-import { pubSub } from "../pubsub.js";
+import { pubSub } from "../pubSub.js";
 import { getTweets } from "./tweet-list-provider.js";
 import { buildEmptyTweetList, buildTweetListSpinner, buildTweetView } from "./tweet-list-view.js";
 
@@ -7,7 +7,6 @@ export class TweetListController {
 
   constructor(nodeElement) {
     this.tweetsContainerElement = nodeElement;
-
 
     this.loadTweets()
   }
@@ -19,6 +18,7 @@ export class TweetListController {
     try {
       tweets = await getTweets();
     } catch (error) {
+      // this.notificationController.showNotification(error)
       pubSub.publish(pubSub.TOPICS.TWEET_LOAD_ERROR, error)
     }
 
