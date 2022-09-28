@@ -1,7 +1,7 @@
 class PubSub {
 
   TOPICS = {
-    TWEET_LOAD_ERROR: 'TWEET_LOAD_ERROR'
+    NOTIFICATION_ERROR: 'NOTIFICATION_ERROR'
   }
 
   constructor() {

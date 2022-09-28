@@ -10,7 +10,7 @@ export class NotificationController {
   }
 
   subscribeToEvents() {
-    pubSub.subscribe(pubSub.TOPICS.TWEET_LOAD_ERROR, (message) => {
+    pubSub.subscribe(pubSub.TOPICS.NOTIFICATION_ERROR, (message) => {
       this.showNotification(message)
     })
   }

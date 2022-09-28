@@ -19,7 +19,7 @@ export class TweetListController {
       tweets = await getTweets();
     } catch (error) {
       // this.notificationController.showNotification(error)
-      pubSub.publish(pubSub.TOPICS.TWEET_LOAD_ERROR, error)
+      pubSub.publish(pubSub.TOPICS.NOTIFICATION_ERROR, error)
     }
 
     if (tweets.length === 0) {
